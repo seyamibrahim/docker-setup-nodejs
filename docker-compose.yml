@@ -1,0 +1,17 @@
+version: "1.0"
+
+services:
+  postgres:
+    image: postgres # Use the official PostgreSQL image from Docker Hub
+    ports:
+      - "5432:5432" # Map host port 5432 to container port 5432
+    environment:
+      POSTGRES_USER: myuser # Set the PostgreSQL user
+      POSTGRES_PASSWORD: mypassword # Set the PostgreSQL password
+      POSTGRES_DB: mydatabase # Set the default database name
+  
+  redis:
+    image: redis # Use the official Redis image from Docker Hub
+    ports:
+      - "6379:6379" # Map host port 6379 to container port 6379
+
